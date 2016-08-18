@@ -24,32 +24,74 @@
 <meta property="twitter:description" content="Why progressive enhancement matters" />
 <meta property="twitter:title" content="Progressive enhancement" />
 <link rel="canonical" href="http://progressive-enhancement.be" />
+<style>
+	html,
+	body {
+		width: 100%;
+		height: 100%;
+	}
+
+	html {
+		box-sizing: border-box;
+	}
+
+	*,
+	*::before,
+	*::after {
+		box-sizing: inherit;
+	}
+
+	body {
+		margin: 0;
+		padding: 1em;
+		font-family: Georgia, serif;
+		font-size: 18px;
+		line-height: 1.5555;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	}
+
+	main {
+		max-width: 46em;
+		margin-right: auto;
+		margin-left: auto;
+	}
+	abbr {
+		border-bottom: 2px solid #ccc;
+		cursor: help;
+	}
+</style>
 </head>
+
 <body>
 
 <noscript>
-	<h1>Progressive enhancement</h1>
-	
-	<p>Basic content and functionality should be accessible to all web browsers where enhanced layout is provided by externally linked CSS and enhanced behavior is provided by unobtrusive, externally linked JavaScript. </p>
-	
-	<p>Because the basic content is always accessible to search engine spiders, pages built with PE methods avoid problems that may hinder search engine indexing</p>
-	
-	<h2>Interesting reads: </h2>
-	<ul>
-		<li>
-			<a href="https://www.youtube.com/watch?v=3aw6U2uVl0I">Talk from Jeremy Keith at Coldfront about Resilience</a>
-		</li>
-		<li>
-			<a href="http://sighjavascript.tumblr.com/">Sigh javascript: The best sites, only accessible to some.</a>
-		</li>
-		<li>
-			<a href="https://github.com/NamPNQ/You-Dont-Need-Javascript">You don’t need JavaScript is a repo that aggregates many of these “Pure CSS” Solutions.</a>
-		</li>
-	</ul>
+	<main role="main">
+		<h1>Progressive enhancement</h1>
+
+		<p>Basic content and functionality should be accessible to all web browsers where enhanced layout is provided by externally linked CSS and enhanced behavior is provided by unobtrusive, externally linked JavaScript. </p>
+
+		<p>Because the basic content is always accessible to search engine spiders, pages built with <abbr title="Progressive Enhancement">PE</abbr> methods avoid problems that may hinder search engine indexing</p>
+
+		<h2>Interesting reads: </h2>
+		<ul>
+			<li>
+				<a href="https://www.youtube.com/watch?v=3aw6U2uVl0I">Talk from Jeremy Keith at Coldfront about Resilience</a>
+			</li>
+			<li>
+				<a href="http://sighjavascript.tumblr.com/">Sigh javascript: The best sites, only accessible to some.</a>
+			</li>
+			<li>
+				<a href="https://github.com/NamPNQ/You-Dont-Need-Javascript">You don’t need JavaScript is a repo that aggregates many of these “Pure CSS” Solutions.</a>
+			</li>
+		</ul>
+	</main>
 </noscript>
 
 <script>
-document.write('<h1>Sorry, you must have JavaScript disabled in your browser to utilize the full functionality of this website.</h1>');
+document.write('<main><h1>Sorry, you must have JavaScript disabled in your browser to utilize the full functionality of this website.</h1></main');
 </script>
 
 </body>
