@@ -1,0 +1,2 @@
+# progressive-enhancement
+A manifesto
