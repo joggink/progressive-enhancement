@@ -24,15 +24,53 @@
 <meta property="twitter:description" content="Why progressive enhancement matters" />
 <meta property="twitter:title" content="Progressive enhancement" />
 <link rel="canonical" href="http://progressive-enhancement.be" />
+<style>
+	body {
+		max-width: 48rem;
+		margin: 0 auto;
+		padding: 1em;
+		color:  #555;
+		font-family: Georgia, serif;
+		font-size: 18px;
+		line-height: 1.5555;
+		font-size: 1.4em;
+	}
+	h1, h2, h3, h4, h5, h6 {
+		color:  #222;
+		font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+		line-height: 1.1;
+	}
+	main {
+		max-width: 46em;
+		margin-right: auto;
+		margin-left: auto;
+	}
+	abbr {
+		border-bottom: 2px solid #ccc;
+		cursor: help;
+	}
+</style>
 </head>
 <body>
 
-<noscript>
-	<h1>Progressive enhancement</h1>
+	<h1>What is progressive enhancement</h1>
 	
-	<p>Basic content and functionality should be accessible to all web browsers where enhanced layout is provided by externally linked CSS and enhanced behavior is provided by unobtrusive, externally linked JavaScript. </p>
+	<p>
+		Tim Berners-Lee’s original vison was a universally accessible web. And that's what the web is all about: <strong>content</strong>!<br />
+		Some sites distribute it, some ask you to provide them with it, some require it and some even manipulate it. But it's always about being able to share information with the world. <p>
+		
+	<p>Let me put it this way: I've never heard someone recommending a website because they are using webfonts or some fancy javascript. And yet, there's a rise of javascript-driven websites where I see developers rebuilding browser functionality all over again: reinventing URL schemes, writing code to store history for these custom URL's, using nifty code to display plain text on websites, etc... What is wrong with using plain HTML and letting the browser handle the requests / history / etc...?</p>
 	
-	<p>Because the basic content is always accessible to search engine spiders, pages built with PE methods avoid problems that may hinder search engine indexing</p>
+	<p>In short: HTML and CSS are forgiving. If you use <kbd>&lt;my-custom-tag&gt;</kbd> your browser won't understand it. But because of how HTML is interpreted it will render anything between the opening and closing tag. Same goes for CSS, selectors and attributes that are malformed or unknown will just be ignored by your browser but your content can still be read. By using javascript as a first layer to deliver content you are breaking this proven mechanism, leaving visitors with a white page or even some crazy {body-content} tags<p>
+	
+	<p>If you visit <a href="https://www.antwerpen.be/">antwerpen.be</a> or <a href="http://stubru.be/">stubru.be</a> and disable javascript you get a white page saying you need javascript. If you enable javascript you'll see how sad it is because why use javascript to fetch the content? All that javascript does is send ajax requests to the server and fetch the page content?!? Why not use the web the way it was meant and send everyting with the inital page response?</p>
+	
+	<p>If we check all requests for <a href="https://www.antwerpen.be/">antwerpen.be</a> we see that the footprint of all requests is 3.5MB. Javascript is 1.5MB, the xhr responses are 29.4KB. <strong>So 43% of all resources are used to fetch 0.008%?</strong>. By going progressive enhanced everybody could visit the site with any device and only download 2MB?</p>
+	
+	<p>Since 2003 progressive enhancement is the way to go, we're 2016 and a lot has changed. Browsers, speed, mobile users, etc... One of the biggest misconception is that everybody has a high speed internet connection, uses a decent browser, has a kickass cpu to cope with the intensive javascript, etc... Guess what: <br />
+		<strong>Nobody has javascript enabled until your javascript files are downloaded from you server. </strong></p>
+		
+	<p>I could keep going on reasons to say why JS First is bad but I guess you get the idea. So please: build for a web with a strong focus on your content. Afteral: delivering your message to people around the world is more important than trying to create a unique and fancy experience.</p>
 	
 	<h2>Interesting reads: </h2>
 	<ul>
@@ -46,11 +84,6 @@
 			<a href="https://github.com/NamPNQ/You-Dont-Need-Javascript">You don’t need JavaScript is a repo that aggregates many of these “Pure CSS” Solutions.</a>
 		</li>
 	</ul>
-</noscript>
-
-<script>
-document.write('<h1>Sorry, you must have JavaScript disabled in your browser to utilize the full functionality of this website.</h1>');
-</script>
 
 </body>
 </html>
