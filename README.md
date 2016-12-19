@@ -1,2 +1,5 @@
 # progressive-enhancement
-A manifesto
+
+A manifesto you can find [here]
+
+[here]: http://progressive-enhancement.be
